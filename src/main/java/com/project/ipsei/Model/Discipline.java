@@ -3,16 +3,14 @@ package com.project.ipsei.Model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 @Entity
-@Table(name = "tb_course")
+@Table(name = "tb_discipline")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Course {
+public class Discipline {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +20,6 @@ public class Course {
     private String name;
     private String code;
     private String description;
-    private Integer durationMoths;
-    private String modality;
+    private Integer workload;
     private boolean active;
-    LocalDateTime createdAt;
-
-
 }

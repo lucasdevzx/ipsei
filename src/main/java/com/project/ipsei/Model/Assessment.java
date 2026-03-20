@@ -6,26 +6,26 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tb_course")
+@Table(name = "tb_assessment")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Course {
+public class Assessment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
-    private String name;
-    private String code;
+    private String title;
     private String description;
-    private Integer durationMoths;
-    private String modality;
-    private boolean active;
-    LocalDateTime createdAt;
-
-
+    private String type;
+    private Integer totalPoints;
+    private Integer passingScore;
+    private Integer durationMinutes;
+    private LocalDateTime startAt;
+    private LocalDateTime endAt;
+    private boolean published;
 }
