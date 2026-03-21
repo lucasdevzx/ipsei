@@ -34,6 +34,9 @@ public class User {
     @JoinColumn(name = "profile_id") // FK no banco
     private Profile profile;
 
+    @OneToMany(mappedBy = "user")
+    private List<StudentPerformance> performances;
+
     @Embedded
     private Audit audit;
 }

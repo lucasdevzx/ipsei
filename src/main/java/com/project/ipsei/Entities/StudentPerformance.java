@@ -1,5 +1,6 @@
 package com.project.ipsei.Entities;
 
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,10 @@ public class StudentPerformance {
     @EqualsAndHashCode.Include
     private Long id;
 
-    private String studentName;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
@@ -28,11 +32,21 @@ public class StudentPerformance {
             inverseJoinColumns = @JoinColumn(name = "course_id")
     )
     private List<Course> courses = new ArrayList<>();
-
+    /**
+     * Este campo é referente ao campo term de {@link AcademicTerm}?
+     */
     private String term;
     private Double score;
+    /**
+     * Isto aqui deve ser uma entidade.
+     * TODO: Criar entidae Reward
+     */
     private String reward;
-
+    /**
+     * Isso aqui também deve ser uma entidade, UserRank
+     * Pois devemos guardar o rank, de onde vem o Ranqueamento, até quando, quem ultrapassor, etc..
+     * TODO: Criar entidade de ranquamento UserRank
+     */
     @Transient
     private Integer rank;
 

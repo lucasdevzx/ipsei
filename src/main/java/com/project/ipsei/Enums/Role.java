@@ -1,5 +1,9 @@
 ﻿package com.project.ipsei.Enums;
 
+import lombok.Data;
+import lombok.Getter;
+
+@Getter
 public enum Role {
 
     ADMIN_MASTER("Admin Master"),
@@ -17,7 +21,4 @@ public enum Role {
         this.label = label;
     }
 
-    public String getLabel() {
-        return label;
-    }
 }
