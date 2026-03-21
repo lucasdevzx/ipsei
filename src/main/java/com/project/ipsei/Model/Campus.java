@@ -24,7 +24,7 @@ public class Campus {
     private String state;
 
     // Acredito ser melhor transformar Adress em entidade
-    private String adress;
+    private String address;
 
     private String phone;
     private boolean active;

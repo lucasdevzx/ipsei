@@ -1,5 +1,6 @@
 package com.project.ipsei.Model;
 
+import com.project.ipsei.Enums.Difficulty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,10 +22,7 @@ public class Question {
 
     private String statement;
     private String type;
-
-    // Acredito ser melhor transformar difficulty em role
-    private String difficulty;
-
+    private Difficulty difficulty;
     private Integer points;
     private boolean active;
     LocalDateTime  createdAt;

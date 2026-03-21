@@ -26,6 +26,10 @@ public class StudentPerformanceService {
     }
 
     public List<StudentPerformance> listByScoreRank() {
+        /*
+         * TODO: Isso aqui vai causar má performance, a melhor maneira de fazer isso é através de uma query SQL
+         *  pequise por @Query Java 17 Repository e vais entender melhor como fazer esse retorno.
+         */
         List<StudentPerformance> rows = repository.findAll(Sort.by(Sort.Direction.DESC, "score"));
         int rank = 1;
         for (StudentPerformance row : rows) {
