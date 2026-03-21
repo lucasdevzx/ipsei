@@ -1,5 +1,6 @@
 package com.project.ipsei.Model;
 
+import com.project.ipsei.Enums.Difficulty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,8 +23,8 @@ public class LearningPath {
     private String title;
     private String description;
 
-    // Acredito ser melhor transformar difficulty em role
-    private String difficulty;
+
+    private Difficulty difficulty;
 
     private Integer estimatedHours;
     private boolean published;

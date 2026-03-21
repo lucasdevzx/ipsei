@@ -26,7 +26,7 @@ public class Institution {
     private String phone;
 
     // Acredito ser melhor transformar Adress em entidade
-    private String adress;
+    private String address;
 
     private boolean active;
     private LocalDateTime createdAt;
