@@ -1,18 +1,18 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "tb_question_bank")
+@Table(name = "tb_academic_term")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class QuestionBank {
+public class AcademicTerm {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,8 +20,9 @@ public class QuestionBank {
     private Long id;
 
     private String name;
-    private String description;
-    private String area;
-    private boolean active;
-    private LocalDateTime createdAt;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private String status;
+    private Integer year;
+    private Integer semester;
 }

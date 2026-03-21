@@ -1,6 +1,6 @@
 package com.project.ipsei.Controllers;
 
-import com.project.ipsei.Model.StudentPerformance;
+import com.project.ipsei.Entities.StudentPerformance;
 import com.project.ipsei.Services.StudentPerformanceService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

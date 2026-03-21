@@ -1,4 +1,4 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

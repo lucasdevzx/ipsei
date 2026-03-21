@@ -1,4 +1,4 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -6,13 +6,13 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tb_course")
+@Table(name = "tb_question_bank")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Course {
+public class QuestionBank {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,12 +20,8 @@ public class Course {
     private Long id;
 
     private String name;
-    private String code;
     private String description;
-    private Integer durationMoths;
-    private String modality;
+    private String area;
     private boolean active;
-    LocalDateTime createdAt;
-
-
+    private LocalDateTime createdAt;
 }

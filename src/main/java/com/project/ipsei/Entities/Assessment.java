@@ -1,19 +1,18 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
-import com.project.ipsei.Enums.Difficulty;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tb_learning_path")
+@Table(name = "tb_assessment")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class LearningPath {
+public class Assessment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,11 +21,11 @@ public class LearningPath {
 
     private String title;
     private String description;
-
-
-    private Difficulty difficulty;
-
-    private Integer estimatedHours;
+    private String type;
+    private Integer totalPoints;
+    private Integer passingScore;
+    private Integer durationMinutes;
+    private LocalDateTime startAt;
+    private LocalDateTime endAt;
     private boolean published;
-    LocalDateTime createdAt;
 }
