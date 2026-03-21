@@ -25,4 +25,6 @@ public class AcademicTerm {
     private String status;
     private Integer year;
     private Integer semester;
+    @Embedded
+    private Audit audit;
 }

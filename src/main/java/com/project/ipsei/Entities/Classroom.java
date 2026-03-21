@@ -24,4 +24,7 @@ public class Classroom {
     private int studentsQuantity;
     private LocalDate startDate;
     private LocalDate endDate;
+
+    @Embedded
+    private Audit audit;
 }

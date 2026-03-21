@@ -21,4 +21,7 @@ public class Subject {
     private String description;
     private String area;
     private boolean active;
+
+    @Embedded
+    private Audit audit;
 }

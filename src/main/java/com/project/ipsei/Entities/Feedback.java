@@ -24,4 +24,7 @@ public class Feedback {
     private String type;
     private LocalDateTime createdAt;
     private boolean visible;
+
+    @Embedded
+    private Audit audit;
 }

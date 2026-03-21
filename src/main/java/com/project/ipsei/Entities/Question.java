@@ -25,5 +25,7 @@ public class Question {
     private Difficulty difficulty;
     private Integer points;
     private boolean active;
-    LocalDateTime  createdAt;
+
+    @Embedded
+    private Audit audit;
 }

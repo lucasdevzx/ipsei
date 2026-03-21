@@ -22,4 +22,6 @@ public class Discipline {
     private String description;
     private Integer workload;
     private boolean active;
+    @Embedded
+    private Audit audit;
 }

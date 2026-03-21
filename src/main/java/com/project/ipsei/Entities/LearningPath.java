@@ -28,5 +28,6 @@ public class LearningPath {
 
     private Integer estimatedHours;
     private boolean published;
-    LocalDateTime createdAt;
+    @Embedded
+    private Audit audit;
 }

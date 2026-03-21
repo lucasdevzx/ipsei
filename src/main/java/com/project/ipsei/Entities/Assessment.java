@@ -28,4 +28,6 @@ public class Assessment {
     private LocalDateTime startAt;
     private LocalDateTime endAt;
     private boolean published;
+    @Embedded
+    private Audit audit;
 }

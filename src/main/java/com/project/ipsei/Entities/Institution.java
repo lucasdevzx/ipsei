@@ -24,10 +24,10 @@ public class Institution {
     private String type;
     private String email;
     private String phone;
-
-    // Acredito ser melhor transformar Adress em entidade
-    private String address;
-
     private boolean active;
-    private LocalDateTime createdAt;
+    @Embedded
+    private Address address;
+
+    @Embedded
+    private Audit audit;
 }

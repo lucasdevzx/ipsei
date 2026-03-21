@@ -24,4 +24,6 @@ public class Lesson {
     private Integer durationMinutes;
     private Integer orderIndex;
     private boolean published;
+    @Embedded
+    private Audit audit;
 }

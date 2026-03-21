@@ -23,10 +23,13 @@ public class Campus {
     private String city;
     private String state;
 
-    // Acredito ser melhor transformar Adress em entidade
-    private String address;
+
 
     private String phone;
     private boolean active;
     private LocalDateTime createdAt;
+    @Embedded
+    private Address address;
+    @Embedded
+    private Audit audit;
 }

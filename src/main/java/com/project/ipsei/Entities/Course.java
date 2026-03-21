@@ -25,7 +25,9 @@ public class Course {
     private Integer durationMoths;
     private String modality;
     private boolean active;
-    LocalDateTime createdAt;
+    private LocalDateTime createdAt;
+    @Embedded
+    private Audit audit;
 
 
 }

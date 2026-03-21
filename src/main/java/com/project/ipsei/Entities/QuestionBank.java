@@ -23,5 +23,7 @@ public class QuestionBank {
     private String description;
     private String area;
     private boolean active;
-    private LocalDateTime createdAt;
+
+    @Embedded
+    private Audit audit;
 }

@@ -1,6 +1,6 @@
 package com.project.ipsei.Services;
 
-import com.project.ipsei.Model.StudentPerformance;
+import com.project.ipsei.Entities.StudentPerformance;
 import com.project.ipsei.Repositories.StudentPerformanceRepository;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
