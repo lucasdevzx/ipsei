@@ -1,16 +1,15 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tb_course")
+@Data
 @NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Course {
 
@@ -22,10 +21,10 @@ public class Course {
     private String name;
     private String code;
     private String description;
-    private Integer durationMoths;
+    private Integer durationMonths;
     private String modality;
     private boolean active;
-    LocalDateTime createdAt;
 
-
+    @Embedded
+    private Audit audit;
 }

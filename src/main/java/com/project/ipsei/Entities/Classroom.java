@@ -1,4 +1,4 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,4 +24,7 @@ public class Classroom {
     private int studentsQuantity;
     private LocalDate startDate;
     private LocalDate endDate;
+
+    @Embedded
+    private Audit audit;
 }

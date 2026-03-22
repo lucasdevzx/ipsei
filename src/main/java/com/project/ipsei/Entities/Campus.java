@@ -1,4 +1,4 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -6,13 +6,13 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tb_institution")
+@Table(name = "tb_campus")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Institution {
+public class Campus {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,14 +20,16 @@ public class Institution {
     private Long id;
 
     private String name;
-    private String cnpj;
-    private String type;
-    private String email;
+    private String city;
+    private String state;
+
+
+
     private String phone;
-
-    // Acredito ser melhor transformar Adress em entidade
-    private String adress;
-
     private boolean active;
     private LocalDateTime createdAt;
+    @Embedded
+    private Address address;
+    @Embedded
+    private Audit audit;
 }
