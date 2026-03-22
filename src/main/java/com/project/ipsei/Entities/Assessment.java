@@ -1,4 +1,4 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -28,4 +28,6 @@ public class Assessment {
     private LocalDateTime startAt;
     private LocalDateTime endAt;
     private boolean published;
+    @Embedded
+    private Audit audit;
 }

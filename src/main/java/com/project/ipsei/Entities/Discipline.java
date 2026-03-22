@@ -1,18 +1,16 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
-
 @Entity
-@Table(name = "tb_academic_term")
+@Table(name = "tb_discipline")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class AcademicTerm {
+public class Discipline {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,9 +18,10 @@ public class AcademicTerm {
     private Long id;
 
     private String name;
-    private LocalDate startDate;
-    private LocalDate endDate;
-    private String status;
-    private Integer year;
-    private Integer semester;
+    private String code;
+    private String description;
+    private Integer workload;
+    private boolean active;
+    @Embedded
+    private Audit audit;
 }

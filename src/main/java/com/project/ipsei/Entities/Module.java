@@ -1,4 +1,4 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -23,5 +23,6 @@ public class Module {
     private String description;
     private int orderIndex;
     private boolean published;
-    LocalDateTime createdAt;
+    @Embedded
+    private Audit audit;
 }

@@ -1,29 +1,35 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
-import com.project.ipsei.Enums.Difficulty;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tb_question")
+@Table(name = "tb_campus")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Question {
+public class Campus {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
-    private String statement;
-    private String type;
-    private Difficulty difficulty;
-    private Integer points;
+    private String name;
+    private String city;
+    private String state;
+
+
+
+    private String phone;
     private boolean active;
-    LocalDateTime  createdAt;
+    private LocalDateTime createdAt;
+    @Embedded
+    private Address address;
+    @Embedded
+    private Audit audit;
 }

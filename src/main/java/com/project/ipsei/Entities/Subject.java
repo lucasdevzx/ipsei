@@ -1,4 +1,4 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,9 +16,13 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
-
+    @Column(nullable = false, unique = true)
     private String name;
+    @Column(length = 100)
     private String description;
     private String area;
-    private boolean active;
+    private boolean isActive;
+
+    @Embedded
+    private Audit audit;
 }
