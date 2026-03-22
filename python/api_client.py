@@ -29,3 +29,5 @@ class StudentPerformanceAPI:
         else:
             print("Erro ao salvar performance:", response.status_code)
             return None
+        
+# TODAS AS HASHTAGS QUE EU USAR, SÃO PARA EXPLICAR A VOCÊS, ERICKSON E LUCAS COMO ESTOU IMPLEMENTANDO PYTHON PARA O CÓDIGO DE VOCÊS!
