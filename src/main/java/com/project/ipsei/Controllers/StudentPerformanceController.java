@@ -1,7 +1,7 @@
 package com.project.ipsei.Controllers;
 
 import com.project.ipsei.Model.StudentPerformance;
-import com.project.ipsei.Services.StudentPerformanceService;
+import com.project.ipsei.Services.StudentPerformanceServiceImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,9 +28,9 @@ import java.util.List;
 @RequestMapping("/api/performance")
 public class StudentPerformanceController {
 
-    private final StudentPerformanceService service;
+    private final StudentPerformanceServiceImpl service;
 
-    public StudentPerformanceController(StudentPerformanceService service) {
+    public StudentPerformanceController(StudentPerformanceServiceImpl service) {
         this.service = service;
     }
 
