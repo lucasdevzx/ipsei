@@ -1,32 +1,29 @@
-package com.project.ipsei.Model;
+package com.project.ipsei.Entities;
 
-import com.project.ipsei.Enums.Difficulty;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tb_learning_path")
+@Table(name = "tb_question_bank")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class LearningPath {
+public class QuestionBank {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
-    private String title;
+    private String name;
     private String description;
+    private String area;
+    private boolean active;
 
-
-    private Difficulty difficulty;
-
-    private Integer estimatedHours;
-    private boolean published;
-    LocalDateTime createdAt;
+    @Embedded
+    private Audit audit;
 }
